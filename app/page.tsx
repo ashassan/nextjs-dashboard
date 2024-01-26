@@ -1,7 +1,7 @@
 import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-// import from when we were using css modules 
+// import from when we were using css modules
 // import styles from '@/app/ui/home.module.css';
 import { lusitana } from '@/app/ui/fonts';
 import Image from 'next/image';
@@ -18,7 +18,9 @@ export default function Page() {
           <div className="h-0 w-0 border-b-[30px] border-l-[20px] border-r-[20px] border-b-black border-l-transparent border-r-transparent" />
           {/* syntax for using css modules
           <div className={styles.shape} /> */}
-          <p className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}>
+          <p
+            className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}
+          >
             <strong>Welcome to Acme.</strong> This is the example for the{' '}
             <a href="https://nextjs.org/learn/" className="text-blue-500">
               Next.js Learn Course
@@ -33,25 +35,24 @@ export default function Page() {
           </Link>
         </div>
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
-       {/* Here, you're setting the width to 1000 and height to 760 pixels. It's good practice to set the width and height of your images to avoid layout shift, */}
-      {/* these should be an aspect ratio identical to the source image. */}
-      {/* You'll also notice the class hidden to remove the image from the DOM on mobile screens,
+          {/* Here, you're setting the width to 1000 and height to 760 pixels. It's good practice to set the width and height of your images to avoid layout shift, */}
+          {/* these should be an aspect ratio identical to the source image. */}
+          {/* You'll also notice the class hidden to remove the image from the DOM on mobile screens,
        and md:block to show the image on desktop screens. */}
-        <Image
-        src="/hero-desktop.png"
-        width={1000}
-        height={760}
-        className="hidden md:block"
-        alt="Screenshots of the dashboard project showing desktop version"
-      />
-         <Image
-        src="/hero-mobile.png"
-        width={560}
-        height={620}
-        className="block md:hidden"
-        alt="Screenshots of the dashboard project showing desktop version"
-      />
-     
+          <Image
+            src="/hero-desktop.png"
+            width={1000}
+            height={760}
+            className="hidden md:block"
+            alt="Screenshots of the dashboard project showing desktop version"
+          />
+          <Image
+            src="/hero-mobile.png"
+            width={560}
+            height={620}
+            className="block md:hidden"
+            alt="Screenshots of the dashboard project showing desktop version"
+          />
         </div>
       </div>
     </main>
