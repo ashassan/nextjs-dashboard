@@ -11,6 +11,10 @@ export default async function Page({ params }: { params: { id: string } }) {
   ]);
 
   if (!invoice) {
+    // Invoking the notFound() function throws a NEXT_NOT_FOUND error and 
+    // terminates rendering of the route segment in which it was thrown. 
+    // Specifying a not-found file allows you to gracefully handle such errors 
+    // by rendering a Not Found UI within the segment.
     notFound();
   }
 
